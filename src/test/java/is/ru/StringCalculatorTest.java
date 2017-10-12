@@ -1,4 +1,4 @@
-package is.ru.StringCalculator.StringCalculator
+package is.ru.StringCalculator;
 
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
