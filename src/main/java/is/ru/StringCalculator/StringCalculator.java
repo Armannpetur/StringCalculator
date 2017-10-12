@@ -7,7 +7,8 @@ public class StringCalculator {
 			return 0;
 		}
 		else{
-			if(text.contains(",")){
+			if(text.contains(",") || text.contains("\n")){
+				text = text.replaceAll("\n", ",");
 				String []numbers = text.split(",");
 				int sum = 0;
 				for (String number: numbers) {
