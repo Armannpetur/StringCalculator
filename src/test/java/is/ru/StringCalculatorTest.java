@@ -49,4 +49,11 @@ public class StringCalculatorTest {
 			assertEquals("Negatives not allowed: -4,-5", ex.getMessage());
 		}
 	}
+
+	@Test
+	public void testNumberBiggerThanTousand(){
+		assertEquals(2, StringCalculator.add("1001,2"));
+	}
+
+
 }

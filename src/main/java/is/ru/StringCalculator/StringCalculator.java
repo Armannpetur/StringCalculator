@@ -7,22 +7,22 @@ public class StringCalculator {
 
 	public static int add(String text){
 
-		if(text.equals("")){
-			return 0;
-		}
-
 		if(text.contains(",") || text.contains("\n")){
 			return getSum(text);
 		}
 		else{
 			return toInt(text);
 		}
-		//return 0;
 	}
 
 
 	private static int toInt(String number){
-		return Integer.parseInt(number);
+		if(number.equals("") || Integer.parseInt(number) > 1000){
+			return 0;
+		}
+		else{
+			return Integer.parseInt(number);
+		}
 	}
 
 	private static void NegNumbMessage(ArrayList<String> NegNumbers){
