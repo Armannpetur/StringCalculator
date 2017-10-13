@@ -12,36 +12,12 @@ public class StringCalculator {
 		}
 
 		if(text.contains(",") || text.contains("\n")){
-			text = text.replaceAll("\n", ",");
-			String []numbers = text.split(",");
-			int sum = 0;
-			boolean isNegative = false;
-			ArrayList<String> NegNumbers = new ArrayList<String>();
-			for(String numb : numbers){
-				
-				if(numb.isEmpty()){
-					continue;
-				}
-				if(toInt(numb) < 0){
-					NegNumbers.add(numb);
-					isNegative = true;
-				}
-				if(isNegative == false){
-					sum +=toInt(numb);
-				}
-			}
-
-			if(isNegative){	
-				NegNumbMessage(NegNumbers);
-			}
-			else{
-				return sum;
-			}
+			return getSum(text);
 		}
 		else{
 			return toInt(text);
 		}
-		return 0;
+		//return 0;
 	}
 
 
@@ -57,6 +33,36 @@ public class StringCalculator {
 		}
 		sb.setLength(sb.length() - 1);
 		throw new RuntimeException(sb.toString());
+	}
+
+	private static int getSum(String text){
+		text = text.replaceAll("\n", ",");
+		String []numbers = text.split(",");
+		int sum = 0;
+		boolean isNegative = false;
+		ArrayList<String> NegNumbers = new ArrayList<String>();
+		for(String numb : numbers){
+			
+			if(numb.isEmpty()){
+				continue;
+			}
+			if(toInt(numb) < 0){
+				NegNumbers.add(numb);
+				isNegative = true;
+			}
+			if(!isNegative){
+				sum +=toInt(numb);
+			}
+		}
+
+		if(isNegative){	
+			NegNumbMessage(NegNumbers);
+		}
+		else{
+			return sum;
+		}
+
+		return 0;	
 	}
 
 }
