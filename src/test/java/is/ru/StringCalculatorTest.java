@@ -29,4 +29,14 @@ public class StringCalculatorTest {
 	public void testNewLine(){
 		assertEquals(6, StringCalculator.add("1\n2,3"));
 	}
+
+	@Test
+	public void testNegativeNumber(){
+		try{
+			StringCalculator.add("-1,2");
+		}
+		catch(RuntimeException ex){
+			assertEquals("Negatives not allowed: -1");
+		}
+	}
 }
