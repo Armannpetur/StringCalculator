@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="is.ru.StringCalculator.StringCalculatorTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2017-10-13T15:43:23" hostname="LAPTOP-8V60O7Q6" time="0.013">
+<testsuite name="is.ru.StringCalculator.StringCalculatorTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2017-10-13T20:12:23" hostname="LAPTOP-8V60O7Q6" time="0.011">
   <properties/>
-  <testcase name="testMultipleNumbers" classname="is.ru.StringCalculator.StringCalculatorTest" time="0.01"/>
+  <testcase name="testMultipleNumbers" classname="is.ru.StringCalculator.StringCalculatorTest" time="0.008"/>
   <testcase name="testEmptyString" classname="is.ru.StringCalculator.StringCalculatorTest" time="0.0"/>
   <testcase name="testNegativeNumber" classname="is.ru.StringCalculator.StringCalculatorTest" time="0.0"/>
   <testcase name="testNewLine" classname="is.ru.StringCalculator.StringCalculatorTest" time="0.001"/>
-  <testcase name="testTwoNumbers" classname="is.ru.StringCalculator.StringCalculatorTest" time="0.001"/>
+  <testcase name="testTwoNumbers" classname="is.ru.StringCalculator.StringCalculatorTest" time="0.0"/>
+  <testcase name="testNegativeNumbers" classname="is.ru.StringCalculator.StringCalculatorTest" time="0.0"/>
   <testcase name="testOneNumber" classname="is.ru.StringCalculator.StringCalculatorTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
