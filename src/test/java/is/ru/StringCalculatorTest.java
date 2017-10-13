@@ -55,5 +55,10 @@ public class StringCalculatorTest {
 		assertEquals(2, StringCalculator.add("1001,2"));
 	}
 
+	@Test
+	public void testDelimiter(){
+		assertEquals(3, StringCalculator.add("//;\n1,2"));
+	}
+
 
 }

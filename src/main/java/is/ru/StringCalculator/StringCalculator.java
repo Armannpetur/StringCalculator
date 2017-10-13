@@ -7,7 +7,7 @@ public class StringCalculator {
 
 	public static int add(String text){
 
-		if(text.contains(",") || text.contains("\n")){
+		if(text.contains(",") || text.contains("\n") || text.contains(";")){
 			return getSum(text);
 		}
 		else{
@@ -17,7 +17,7 @@ public class StringCalculator {
 
 
 	private static int toInt(String number){
-		if(number.equals("") || Integer.parseInt(number) > 1000){
+		if(number.equals("") || Integer.parseInt(number) > 1000 || number.contains("//")){
 			return 0;
 		}
 		else{
@@ -43,7 +43,7 @@ public class StringCalculator {
 		ArrayList<String> NegNumbers = new ArrayList<String>();
 		for(String numb : numbers){
 			
-			if(numb.isEmpty()){
+			if(numb.isEmpty() || numb.contains("/")){
 				continue;
 			}
 			if(toInt(numb) < 0){
