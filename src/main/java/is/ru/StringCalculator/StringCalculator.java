@@ -31,15 +31,8 @@ public class StringCalculator {
 				}
 			}
 
-			if(isNegative){
-				
-				StringBuilder sb = new StringBuilder("Negatives not allowed: ");
-				for(String numb : NegNumbers){
-					sb.append(numb);
-					sb.append(",");
-				}
-				sb.setLength(sb.length() - 1);
-				throw new RuntimeException(sb.toString());
+			if(isNegative){	
+				NegNumbMessage(NegNumbers);
 			}
 			else{
 				return sum;
@@ -48,12 +41,22 @@ public class StringCalculator {
 		else{
 			return toInt(text);
 		}
-		
+		return 0;
 	}
 
 
 	private static int toInt(String number){
 		return Integer.parseInt(number);
+	}
+
+	private static void NegNumbMessage(ArrayList<String> NegNumbers){
+		StringBuilder sb = new StringBuilder("Negatives not allowed: ");
+		for(String numb : NegNumbers){
+			sb.append(numb);
+			sb.append(",");
+		}
+		sb.setLength(sb.length() - 1);
+		throw new RuntimeException(sb.toString());
 	}
 
 }
